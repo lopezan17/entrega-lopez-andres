@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
 
-html{
+html {
     font-size: 10px;
 }
 
-body{
-    font-family:'Rubik', sans-serif;
+body {
+    font-family: 'Rubik', sans-serif;
     font-size: 1.3rem;
     text-align: center;
     display: flex;
@@ -17,46 +18,52 @@ body{
     min-height: 100vh;
 }
 
-a{
+a {
     color: rgba(173, 103, 146, 0.932);
     font-family: 'Rubik', sans-serif;
+    text-decoration: none;
 }
 
-.header-container{
+.header-container {
     position: sticky;
     top: 0px;
 }
 
-header{
-    padding: 10px;
+header {
+    padding: 1px;
     background-color: rgb(253, 200, 210);
     color: rgb(173, 103, 146);
     font-family: 'Rubik', sans-serif;
 }
 
-nav{
+.announcementContainer {
+    padding-top: 12px;
+}
+
+.bg {
     background-color: rgba(255, 188, 199, 0.445);
 }
 
-h1{
+h1 {
     padding: 20px;
 }
 
-.form-contact{
+.form-contact {
     margin: auto;
     padding: 20px;
     padding-right: 42px;
 }
 
-.controls, .controlsMessage{
+.controls,
+.controlsMessage {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(0,0,0,0.14);
+    border: 1px solid rgba(0, 0, 0, 0.14);
     margin-bottom: 16px;
     font-family: 'Rubik', sans-serif;
 }
 
-.controlsMessage{
+.controlsMessage {
     min-height: 100px;
     max-height: 200px;
     max-width: 600px;
@@ -64,7 +71,7 @@ h1{
     height: 100px;
 }
 
-.buttons{
+.buttons {
     padding: 10px;
     padding-left: 32px;
     background-color: white;
@@ -73,199 +80,214 @@ h1{
     font-weight: bolder;
 }
 
-.buttons:hover{
+.buttons:hover {
     cursor: pointer;
 }
 
-footer{
+footer {
     background-color: rgba(255, 188, 199, 0.774);
 }
 
-nav ul li{
-    list-style-type: none;
-}
-
-li{
+li {
     padding: 2px;
 }
 
-.menuLogo{
-    grid-area: logo;
-}
-
-.navLinks{
-    grid-area: nav; 
-}
-
-.grid-nav{
-    padding: 10px;
-    align-items: center;
-    display: grid;
-    grid-template-areas: 
-    "nav logo .";
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-footer{
+footer {
     padding: 10px;
     margin-bottom: 0px;
     margin-top: 20px;
 }
 
-.social-media-container{
+.social-media-container {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
-header{
+header {
     grid-area: header;
 }
 
-nav{
+nav {
     grid-area: nav;
 }
 
-main{
+main {
     grid-area: main;
     margin-bottom: 10px;
 }
 
-footer{
+footer {
     grid-area: footer;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
-    grid-template-areas: 
-    "header"
-    "nav"
-    "main"
-    "footer";
-
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
 }
 
-.galeria-img{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.imagenPrincipal{
+.imagenPrincipal {
     width: 495px;
     height: 199px;
 }
 
-.imagenProducto{
-    border: 10px solid rgba(128, 128, 128, 0.137);
+.imagenProducto {
     width: 195px;
     height: 200px;
     margin-top: 10px;
 }
 
-@media (min-width:500px){
+.card-title {
+    color: #bc898a;
+    font-size: larger;
+    font-weight: bold;
+}
 
-    html{
+.card-text {
+    color: #bc898a;
+}
+
+.footer-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer-menu li {
+    padding-bottom: 10px;
+}
+
+@media (min-width:500px) {
+
+    html {
         font-size: 14px;
     }
 
-    body{
+    body {
         font-size: 1.4rem;
-}
+    }
 
-    a{
+    a {
         text-decoration: none;
     }
 
-    .grid-nav{
-        padding: 15px;
-    }
-
-    nav{
+    nav {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
 
-    .imagenLogo{
-        width: 130px;
+    nav ul li {
+        padding-bottom: 7px;
     }
 
-    .imagenPrincipal{
+    .imagenPrincipal {
         width: 767px;
         height: 298px;
     }
-    
-    .imagenProducto{
+
+    .imagenProducto {
         width: 340px;
         height: 390px;
         margin-top: 10px;
     }
 
-    footer{
+    footer {
         margin-top: 0px;
     }
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
 
-    body{
+    body {
         font-size: 1.2rem;
-}
+    }
 
-    .form-contact{
+    .grid-nav {
+        padding: 10px;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .form-contact {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .controls, .controlsMessage{
+    .controls,
+    .controlsMessage {
         width: 600px;
     }
 
-    .buttons{
+    .buttons {
         font-size: 1.2rem;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-description {
+        padding: 20px;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .redesSociales {
+        padding: 10px;
+    }
+
 }
 
-@media (min-width:1024px){
+@media (min-width:1024px) {
 
-    header, nav{
+    header,
+    nav {
         font-size: 1.1rem;
     }
 
-    .grid-nav{
+    .grid-nav {
         padding: 0px;
         grid-template-columns: 1fr 2fr 2fr;
-}
-
-    .navLinks{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 20px;
     }
 
-    li{
+    li {
         padding: 15px;
     }
 
-    .imagenPrincipal{
+    .imagenPrincipal {
         width: 1055px;
         height: 355px;
     }
 
-    .imagenProducto{
+    .imagenProducto {
         transition-property: all;
         transition-duration: 2s;
     }
 
-    .imagenProducto:hover{
+    .imagenProducto:hover {
         transform: scale(1.1);
     }
 
-
-
-
+    .container-text-eyd {
+        text-align: left;
+        padding: 30px;
+        color: rgb(173, 103, 146);
+        ;
+    }
 
 }
