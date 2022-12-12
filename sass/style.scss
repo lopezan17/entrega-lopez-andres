@@ -1,0 +1,183 @@
+@import "variableGlobal";
+@import "general";
+@import "index"; 
+@import "contacto";
+@import "productos";
+@import "eyd";
+@import "faq";
+
+.bg-input{
+    color: white;
+}
+
+@media (min-width:500px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        font-size: 1.4rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .announcementSection{
+        padding-left: 31px;
+        padding-right: 80px;
+    }
+
+    .announcementContainer{
+        padding-left: 60px;
+        padding-right: 13px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        ul li {
+            padding-bottom: 7px;
+        }
+    }
+
+    .galeria-grid-img{
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+    }
+
+    .card{
+        width: 27.5rem;
+    }
+
+    .imagenPrincipal {
+        @include sizes (767px, 298px);
+    }
+
+    .imagenProducto {
+        @include sizes (340px, 390px);
+        margin-top: 10px;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width:768px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .announcementSection{
+        padding-top: 2px;
+        padding-right: 140px;
+    }
+
+    .announcementContainer{
+        padding-left: 108px;
+        padding-right: 13px;
+    }
+
+
+    .grid-nav {
+        padding: 10px;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .form-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .controls,
+    .controlsMessage {
+        width: 600px;
+    }
+
+    .buttons {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-description {
+        padding: 5px;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .redesSociales {
+        padding: 10px;
+    }
+
+    .mail{
+        font-size: 1rem;
+    }
+    
+    .ubicacion{
+        font-size: 1rem;
+    }
+
+    .card{
+        width: 27.5rem;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .announcementContainer {
+        padding-top: 8px;
+    }
+
+    header,
+    nav {
+        font-size: 1.1rem;
+    }
+
+    .grid-nav {
+        padding: 0px;
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    .galeria-grid-img{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-left: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+
+    .imagenPrincipal {
+        @include sizes (1055px, 355px);
+    }
+
+    .imagenProducto {
+        transition-property: all;
+        transition-duration: 2s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

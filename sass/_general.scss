@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
+
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+.header-container {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+header {
+    padding: 1px;
+    background-color: rgb(253, 200, 210);
+    color: $color;
+    font-family: 'Rubik', sans-serif;
+}
+
+.announcementSection{
+    padding-left: 56px;
+    padding-right: 64px;
+}
+
+.announcementContainer {
+    width: 100%;
+    padding-top: 2px;
+}
+
+.announcementText{   
+    padding-top: 5px;
+}
+
+.bg {
+    background-color: rgba(255, 188, 199, 0.445);
+    a {
+        color: $color;
+        font-family: 'Rubik', sans-serif;
+        text-decoration: none;
+    }
+}
+
+.card{
+    width: 26.5rem;
+}
+
+.card-title {
+    color: $card;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.card-text {
+    color: $card;
+}
+
+.bg-card{
+    background-color: rgb(253, 200, 210);
+}
+
+.text-color{
+    color: $color
+}
+
+.imagenProducto {
+    @include sizes (205px, 210px);
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+h1 {
+    padding: 20px;
+}
+
+li {
+    padding: 7px;
+}
+
+footer {
+    background-color: rgba(255, 188, 199, 0.774);
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    a {
+        color: $color;
+        font-family: 'Rubik', sans-serif;
+        text-decoration: none;
+    }
+}
+
+.footer-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    li {
+        padding-bottom: 10px;
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.mail{
+    @extend .social-media;
+}
+
+.mailImg{
+    padding: 10px;
+}
+
+.ubicacion{
+@extend .social-media;
+}
+
+.ubicacionImg{
+    padding: 5px;
+}
+
+

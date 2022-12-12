@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  margin-bottom: 10px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+.header-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+header {
+  padding: 1px;
+  background-color: rgb(253, 200, 210);
+  color: rgba(173, 103, 146, 0.932);
+  font-family: "Rubik", sans-serif;
+}
+
+.announcementSection {
+  padding-left: 56px;
+  padding-right: 64px;
+}
+
+.announcementContainer {
+  width: 100%;
+  padding-top: 2px;
+}
+
+.announcementText {
+  padding-top: 5px;
+}
+
+.bg {
+  background-color: rgba(255, 188, 199, 0.445);
+}
+.bg a {
+  color: rgba(173, 103, 146, 0.932);
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+}
+
+.card {
+  width: 26.5rem;
+}
+
+.card-title {
+  color: #bc898a;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #bc898a;
+}
+
+.bg-card {
+  background-color: rgb(253, 200, 210);
+}
+
+.text-color {
+  color: rgba(173, 103, 146, 0.932);
+}
+
+.imagenProducto {
+  width: 205px;
+  height: 210px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+h1 {
+  padding: 20px;
+}
+
+li {
+  padding: 7px;
+}
+
+footer {
+  background-color: rgba(255, 188, 199, 0.774);
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+footer a {
+  color: rgba(173, 103, 146, 0.932);
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+}
+
+.footer-menu {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+.footer-menu li {
+  padding-bottom: 10px;
+}
+
+.social-media, .ubicacion, .mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.mailImg {
+  padding: 10px;
+}
+
+.ubicacionImg {
+  padding: 5px;
+}
+
+.imagenPrincipal {
+  width: 495px;
+  height: 199px;
+}
+
+.form-contact {
+  margin: auto;
+  padding: 20px;
+  padding-right: 42px;
+  padding-left: 42px;
+}
+
+.controls,
+.controlsMessage {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  margin-bottom: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+.controlsMessage {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 600px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.buttons {
+  padding: 10px;
+  background-color: white;
+  border: 0px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.buttons:hover {
+  cursor: pointer;
+}
+
+.galeria-grid-img {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.container-text-eyd {
+  text-align: left;
+  padding: 30px;
+  color: rgba(173, 103, 146, 0.932);
+}
+
+.FAQ-text {
+  text-align: left;
+  padding-left: 50px;
+  color: rgba(173, 103, 146, 0.932);
+}
+.FAQ-text li {
+  padding: 4px;
+}
+
+.bg-input {
+  color: white;
+}
+
+@media (min-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    font-size: 1.4rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  .announcementSection {
+    padding-left: 31px;
+    padding-right: 80px;
+  }
+  .announcementContainer {
+    padding-left: 60px;
+    padding-right: 13px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  nav ul li {
+    padding-bottom: 7px;
+  }
+  .galeria-grid-img {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+  .card {
+    width: 27.5rem;
+  }
+  .imagenPrincipal {
+    width: 767px;
+    height: 298px;
+  }
+  .imagenProducto {
+    width: 340px;
+    height: 390px;
+    margin-top: 10px;
+  }
+  footer {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .announcementSection {
+    padding-top: 2px;
+    padding-right: 140px;
+  }
+  .announcementContainer {
+    padding-left: 108px;
+    padding-right: 13px;
+  }
+  .grid-nav {
+    padding: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .controls,
+.controlsMessage {
+    width: 600px;
+  }
+  .buttons {
+    font-size: 1.2rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-description {
+    padding: 5px;
+  }
+  .footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .redesSociales {
+    padding: 10px;
+  }
+  .mail {
+    font-size: 1rem;
+  }
+  .ubicacion {
+    font-size: 1rem;
+  }
+  .card {
+    width: 27.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .announcementContainer {
+    padding-top: 8px;
+  }
+  header,
+nav {
+    font-size: 1.1rem;
+  }
+  .grid-nav {
+    padding: 0px;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+  li {
+    padding: 15px;
+  }
+  .galeria-grid-img {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+  .imagenPrincipal {
+    width: 1055px;
+    height: 355px;
+  }
+  .imagenProducto {
+    transition-property: all;
+    transition-duration: 2s;
+  }
+  .imagenProducto:hover {
+    transform: scale(1.1);
+  }
+}/*# sourceMappingURL=style.css.map */
